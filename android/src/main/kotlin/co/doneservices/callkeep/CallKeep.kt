@@ -179,7 +179,7 @@ class CallKeep(private val channel: MethodChannel, private var applicationContex
     }
 
     private fun displayIncomingCall(uuid: String, number: String?, callerName: String?) {
-        if (!isConnectionServiceAvailable() || !hasPhoneAccount()) return
+        if (!isConnectionServiceAvailable()) return
 
         Log.d(TAG, "displayIncomingCall number: $number, callerName: $callerName")
         val extras = Bundle()
